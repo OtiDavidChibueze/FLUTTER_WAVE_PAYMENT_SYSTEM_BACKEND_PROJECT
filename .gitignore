@@ -1,1 +1,4 @@
 node_modules
+.env
+exceptionDevelopment.log
+appDevelopment.log
