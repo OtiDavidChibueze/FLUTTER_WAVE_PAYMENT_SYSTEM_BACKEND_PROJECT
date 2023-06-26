@@ -1,10 +1,11 @@
+// LOGGER CONFIGURATION
 import { createLogger, format, transports } from "winston";
 
 const logger = createLogger({
   format: format.combine(
     format.json(),
     format.splat(),
-    format.timestamp({ format: "ddd , DD MMM YYYY HH:mm:ss [GTM]" }),
+    format.timestamp({ format: "ddd,DD MMM YYYY HH:mm:ss [GTM]" }),
     format.errors({ stack: true }),
     format.printf(({ timestamp, level, message }) => {
       return `[${timestamp}] : [${level.toUpperCase()}] : ${message}`;
